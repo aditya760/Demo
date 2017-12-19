@@ -9,7 +9,7 @@ import (
     . "github.com/onsi/ginkgo"
     "github.com/aws/aws-sdk-go/aws"
     . "github.com/onsi/gomega"
-    "cognizant.com/codeblue/lib"
+    "TheCodeBlue/lib"
     "github.com/golang/mock/gomock"
     "github.com/aws/aws-sdk-go/service/ec2"
     "path/filepath"
