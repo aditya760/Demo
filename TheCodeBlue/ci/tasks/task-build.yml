@@ -17,7 +17,7 @@ run:
   - -exc
   - |
     ls -ltr
-    cd hello-go/test 
+    cd hello-go/TheCodeBlue/test 
     pwd
     echo "START Building"
     go build
