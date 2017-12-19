@@ -18,6 +18,7 @@ run:
   - |
     ls -ltr
     go get github.com/aws/aws-sdk-go/aws
+    go get github.com/golang/mock/gomock
     cd hello-go/TheCodeBlue/test
     pwd
     echo "START TESTING"
