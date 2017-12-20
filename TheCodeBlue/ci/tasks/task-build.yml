@@ -17,8 +17,7 @@ run:
   - -exc
   - |
     ls -ltr
-    cd hello-go/TheCodeBlue/test 
     pwd
     echo "START Building"
-    go build
+    go build cognizant.com/codeblue/test/
     echo "Build DONE"
