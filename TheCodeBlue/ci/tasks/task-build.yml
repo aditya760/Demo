@@ -1,0 +1,23 @@
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: golang
+    tag: 1.7.1
+
+inputs:
+- name: hello-go
+outputs:
+- name: coverage-results
+
+run:
+  path: sh
+  args:
+  - -exc
+  - |
+    ls -ltr
+    pwd
+    echo "START Building"
+    go build cognizant.com/codeblue/test/
+    echo "Build DONE"
