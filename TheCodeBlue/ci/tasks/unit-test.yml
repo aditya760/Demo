@@ -17,10 +17,13 @@ run:
   - -exc
   - |
     ls -ltr
-    go get github.com/aws/aws-sdk-go/aws
-    go get github.com/golang/mock/gomock
-    cd hello-go/TheCodeBlue/test
+    export GOPATH=
+    cd hello-go/src/cognizant.com/codeblue
+    glide up
+    pwd
+    cd ..
+    cd ..
     pwd
     echo "START TESTING"
-    go test
+    go test cognizant.com/codeblue/test/
     echo "TEST DONE"
