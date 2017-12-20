@@ -1,0 +1,30 @@
+resources:
+- name: hello-go
+  type: git
+  source:
+    uri: https://github.com/aditya760/Demo.git
+    branch: master
+    username: aditya760
+    password: asiadi486
+jobs:
+  - name: get-source
+    public: true
+    plan:
+    - get: hello-go
+      trigger: true
+
+  - name: job-unit-tests
+    plan:
+    - get: hello-go
+      passed: [get-source]
+      trigger: true
+    - task: task-unit-tests
+      file: hello-go/TheCodeBlue/ci/tasks/unit-test.yml
+      
+  - name: job-build
+    plan:
+    - get: hello-go
+      trigger: true
+      passed: [job-unit-tests]
+    - task: task-build
+      file: hello-go/TheCodeBlue/ci/tasks/task-build.yml
